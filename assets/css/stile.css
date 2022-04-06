@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: black;
+}
+
+h1 {
+    color: red;
+    padding: 30px 30px;
+    margin: 0;
+    border: 0;
+}
