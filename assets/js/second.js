@@ -40,12 +40,12 @@ async function getData() {
 
 
 getData()
-    .then((tvSerie) => {
+    .then((movieInfo) => {
         TVSeriesPreview(
-            tvSerie.name,
-            tvSerie.homepage,
-            tvSerie.genres,
-            tvSerie.overview,
-            tvSerie.poster_path
+            movieInfo.name,
+            movieInfo.homepage,
+            movieInfo.genres,
+            movieInfo.overview,
+            movieInfo.poster_path
         );
     });
