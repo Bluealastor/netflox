@@ -97,7 +97,7 @@ let selectorGen = []
 // RICHIESTA API
 const getApi = (URL) => {
     fetch(URL).then(res => res.json()).then(data => {
-        console.log(data)
+        // console.log(data)
         showMovies(data)
     })
 }
@@ -136,7 +136,7 @@ const showMovies = ((data) => {
         main.appendChild(divEl)
     }).join("")
 
-    cards.addEventListener("click", () => {
+    movie.addEventListener("click", () => {
         window.location = "/netflox/movie.html?id=" + id;
     });
 
