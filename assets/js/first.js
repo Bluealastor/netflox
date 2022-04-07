@@ -110,13 +110,14 @@ const showMovies = ((data) => {
     main.innerHTML = "";
 
     data.results.map((movie) => {
-        const { title, poster_path, overview, vote_average } = movie
+        const { title, poster_path, overview, vote_average, id } = movie
         const divEl = create("div")
         divEl.classList.add("movie")
+        divEl.id = id
         divEl.innerHTML = `
 
         
-         <div class="card" ></div>
+         <div class="card " ></div>
         <img class="imagin" src="${imgUrl+ poster_path}" alt="${title}"> 
         </div>
         <div class="movieInfo">
