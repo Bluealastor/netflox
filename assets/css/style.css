@@ -16,7 +16,6 @@ body {
 header {
     padding: 1rem;
     display: flex;
-    /* justify-content: flex-end; */
     background-color: var(--secondary-color);
 }
 
@@ -24,19 +23,6 @@ header {
     color: red;
     display: block;
     justify-content: center;
-}
-
-header .search {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    display: flex;
-    justify-content: flex-end;
-    padding: 0.3rem 1rem;
-    font-size: 1rem;
-    color: whitesmoke;
-    font-family: inherit;
-    justify-content: flex-end;
-    border: 30px;
 }
 
 #main {
@@ -87,12 +73,6 @@ img {
 
 /*  */
 
-:root {
-    --star-size: 60px;
-    --star-color: #fff;
-    --star-background: #fc0;
-}
-
 .Stars {
     --percent: calc(var(--rating) / 10 * 100%);
     display: inline-block;
@@ -109,26 +89,6 @@ img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
-/* // Just to make a preview more beautifull */
-
-
-/* body {
-    background: #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-* {
-    position: relative;
-    box-sizing: border-box;
-} */
-
-
-/*  */
 
 #STAR_RATING ul {
     margin: 0px;

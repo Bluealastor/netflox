@@ -11,7 +11,7 @@ const main = getId("main")
 const tags = getId("tags")
 
 
-
+// GENERI FILM
 
 const genres = [{
         "id": 28,
@@ -114,7 +114,7 @@ const showMovies = ((data) => {
         divEl.classList.add("movie")
         divEl.innerHTML = `
 
-        <a href=""movie.html"">
+        <a href="./movie.html">
          <div class="card" ></div>
         <img class="imagin" src="${imgUrl+ poster_path}" alt="${title}"> 
         </div>
@@ -135,7 +135,7 @@ const showMovies = ((data) => {
     }).join("")
 })
 
-// GENERES
+// GENERES e ricerca per genere
 
 
 const setGenre = (() => {
@@ -170,3 +170,21 @@ const setGenre = (() => {
 })
 
 setGenre()
+
+// Redirect
+
+main.addEventListener("click", () => {
+    window.location = "/netflox/movie.html?id=" + id;
+});
+
+
+// export function
+
+export {
+    getApi,
+    setGenre,
+    showMovies,
+    genres,
+    getId,
+    create,
+}
