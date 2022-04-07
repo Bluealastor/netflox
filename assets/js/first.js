@@ -108,6 +108,7 @@ getApi(apiUrl)
 
 const showMovies = ((data) => {
     main.innerHTML = "";
+    const card = document.querySelector("card")
 
     data.results.map((movie) => {
         const { title, poster_path, overview, vote_average, id } = movie
@@ -136,7 +137,7 @@ const showMovies = ((data) => {
         main.appendChild(divEl)
     }).join("")
 
-    movie.addEventListener("click", () => {
+    card.addEventListener("click", () => {
         window.location = "/netflox/movie.html?id=" + id;
     });
 

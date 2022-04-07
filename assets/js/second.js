@@ -10,7 +10,7 @@ var id = 0;
 if (urlId.has("id")) {
     id = urlId.get("id");
 } else {
-    window.location = "./index.html";
+    window.location = "/index.html";
 }
 
 const movieDetail = (title, homepage, genres, overview, imgURL) => {
