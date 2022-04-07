@@ -114,7 +114,7 @@ const showMovies = ((data) => {
         divEl.classList.add("movie")
         divEl.innerHTML = `
 
-        <a href="./movie.html">
+        
          <div class="card" ></div>
         <img class="imagin" src="${imgUrl+ poster_path}" alt="${title}"> 
         </div>
@@ -122,7 +122,7 @@ const showMovies = ((data) => {
         <h3>  ${title} </h3>
         <p class="Stars" style="--rating: ${vote_average};" aria-label="Rating of this product is 2.3 out of 5."></p>
         </div>
-        </a>
+    
 
         <div class="overview">
         <h3>  Trama  </h3>

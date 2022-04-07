@@ -18,7 +18,7 @@ const movieDetail = (title, homepage, genres, overview, imgURL) => {
     const h1ElDetail = document.querySelector("h2");
     const genresElDetail = document.querySelector("h4");
     const descElDetail = document.querySelector("p");
-    const imgElDetail = document.querySelector(".img");
+    const imgElDetail = document.querySelector("img");
 
     imgElDetail.setAttribute("src", "https://image.tmdb.org/t/p/w500/" + imgURL);
     imgElDetail.setAttribute("alt", "poster");
