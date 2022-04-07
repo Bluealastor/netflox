@@ -20,7 +20,7 @@ const movieDetail = (title, homepage, genres, overview, imgURL) => {
     const descElDetail = document.querySelector("p");
     const imgElDetail = document.querySelector(".img");
 
-    imgElDetail.setAttribute("src", "https://image.tmdb.org/t/p/w300/" + imgURL);
+    imgElDetail.setAttribute("src", "https://image.tmdb.org/t/p/w500/" + imgURL);
     imgElDetail.setAttribute("alt", "poster");
     h1ElDetail.textContent = title;
     linkElDetail.setAttribute("href", homepage);
