@@ -8,6 +8,7 @@ const imgUrl = "https://image.tmdb.org/t/p/w500/";
 const getId = (element) => document.getElementById(element)
 const create = (element) => document.createElement(element)
 const main = getId("main")
+const cards = document.querySelector(".card")
 const tags = getId("tags")
 
 
@@ -173,7 +174,7 @@ setGenre()
 
 // Redirect
 
-main.addEventListener("click", () => {
+cards.addEventListener("click", () => {
     window.location = "/netflox/movie.html?id=" + id;
 });
 
