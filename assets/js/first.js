@@ -135,6 +135,11 @@ const showMovies = ((data) => {
 
         main.appendChild(divEl)
     }).join("")
+
+    cards.addEventListener("click", () => {
+        window.location = "/netflox/movie.html?id=" + id;
+    });
+
 })
 
 // GENERES e ricerca per genere
@@ -175,9 +180,6 @@ setGenre()
 
 // Redirect
 
-cards.addEventListener("click", () => {
-    window.location = "/netflox/movie.html?id=" + id;
-});
 
 
 // export function
