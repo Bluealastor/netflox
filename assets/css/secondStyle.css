@@ -1,4 +1,4 @@
-.detail {
+#detail {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -11,7 +11,7 @@
     margin: 35px auto;
 }
 
-.detail .textWrapper {
+#detail .textWrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -21,26 +21,26 @@
     padding: 30px 30px;
 }
 
-.detail .textWrapper h1 {
+#detail .textWrapper h1 {
     font-size: 50px;
     margin-top: 0;
     margin-bottom: 10px;
 }
 
-.detail p {
+#detail p {
     width: 500px;
     font-size: 20px;
     word-spacing: 3px;
     line-height: 25px;
 }
 
-.detail .textWrapper h5 {
+#detail .textWrapper h5 {
     margin-top: 5px;
     font-weight: 500;
     word-spacing: 3px;
 }
 
-.detail img {
+#detail img {
     display: flex;
     flex-direction: row;
     width: 400px;
