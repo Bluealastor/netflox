@@ -41,7 +41,7 @@ async function getData() {
 
 getData()
     .then((movieInfo) => {
-        moviePreview(
+        movieDetail(
             movieInfo.name,
             movieInfo.homepage,
             movieInfo.genres,

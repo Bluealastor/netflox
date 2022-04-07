@@ -117,7 +117,7 @@ const showMovies = ((data) => {
         divEl.innerHTML = `
 
         
-         <div class="card " ></div>
+         <div class="card " id="${id}" ></div>
         <img class="imagin" src="${imgUrl+ poster_path}" alt="${title}"> 
         </div>
         <div class="movieInfo">
@@ -177,8 +177,6 @@ const setGenre = (() => {
 })
 
 setGenre()
-
-// Redirect
 
 
 
