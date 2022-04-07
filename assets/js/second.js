@@ -7,8 +7,8 @@ const urlId = new URLSearchParams(window.location.search)
 
 var id = 0;
 
-if (params.has("id")) {
-    id = params.get("id");
+if (urlId.has("id")) {
+    id = urlId.get("id");
 } else {
     window.location = "/index.html";
 }
@@ -41,7 +41,7 @@ async function getData() {
 
 getData()
     .then((movieInfo) => {
-        TVSeriesPreview(
+        moviePreview(
             movieInfo.name,
             movieInfo.homepage,
             movieInfo.genres,
