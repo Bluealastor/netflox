@@ -114,19 +114,21 @@ const showMovies = ((data) => {
         divEl.classList.add("movie")
         divEl.innerHTML = `
 
-        <div class="card" ></div>
+        <a href=""movie.html"">
+         <div class="card" ></div>
         <img class="imagin" src="${imgUrl+ poster_path}" alt="${title}"> 
         </div>
         <div class="movieInfo">
         <h3>  ${title} </h3>
         <p class="Stars" style="--rating: ${vote_average};" aria-label="Rating of this product is 2.3 out of 5."></p>
         </div>
-      
+        </a>
 
         <div class="overview">
         <h3>  Trama  </h3>
         <p>   ${overview}  </p>
         </div>
+        
         `
 
         main.appendChild(divEl)
@@ -168,14 +170,3 @@ const setGenre = (() => {
 })
 
 setGenre()
-
-
-
-
-
-// 
-
-// STAR
-
-
-//
