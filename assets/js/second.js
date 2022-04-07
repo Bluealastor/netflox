@@ -37,3 +37,15 @@ async function getData() {
     });
     return response.json();
 }
+
+
+getData()
+    .then((tvSerie) => {
+        TVSeriesPreview(
+            tvSerie.name,
+            tvSerie.homepage,
+            tvSerie.genres,
+            tvSerie.overview,
+            tvSerie.poster_path
+        );
+    });
