@@ -120,7 +120,7 @@ const showMovies = ((data) => {
 
         
          <div class="card " id="${id}" >
-         <a href="movie.html?id=${id}">
+        <a href="movie.html?id=${id}">
         <img class="imagin" src="${imgUrl+ poster_path}" alt="${title}"> 
         </div>
         <div class="movieInfo">
