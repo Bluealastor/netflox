@@ -29,7 +29,7 @@ const movieDetail = (title, homepage, genres, overview, imgURL) => {
 };
 
 async function getData() {
-    const response = await fetch("https://api.themoviedb.org/3/?" + id + "api_key=47308f84a54b5d91b280f332b551f284");
+    const response = await fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&?" + id + "api_key=47308f84a54b5d91b280f332b551f284");
     return response.json();
 }
 
