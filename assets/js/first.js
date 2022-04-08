@@ -139,16 +139,9 @@ const showMovies = ((data) => {
 
         main.appendChild(divEl)
     }).join("")
-    const card = document.querySelectorAll(".card")
-    card.forEach(element => {
-
-        element.addEventListener("click", () => {
-            window.location = "/netflox/movie.html?id=" + id;
-            console.log(element)
-        });
-    })
 
 })
+
 
 const card = document.querySelectorAll(".card")
 card.forEach(element => {
