@@ -12,6 +12,7 @@ const cards = document.querySelector(".card")
 const tags = getId("tags")
 
 
+
 // GENERI FILM
 
 const genres = [{
@@ -108,7 +109,7 @@ getApi(apiUrl)
 
 const showMovies = ((data) => {
     main.innerHTML = "";
-    const card = document.querySelector(".card")
+    // const card = document.querySelectorAll(".card")
 
     data.results.map((movie) => {
         const { title, poster_path, overview, vote_average, id } = movie
@@ -118,12 +119,14 @@ const showMovies = ((data) => {
         divEl.innerHTML = `
 
         
-         <div class="card " id="${id}" ></div>
+         <div class="card " id="${id}" >
+         <a href="movie.html?id=${id}">
         <img class="imagin" src="${imgUrl+ poster_path}" alt="${title}"> 
         </div>
         <div class="movieInfo">
         <h3>  ${title} </h3>
         <p class="Stars" style="--rating: ${vote_average};" aria-label="Rating of this product is 2.3 out of 5."></p>
+        </a>
         </div>
     
 
@@ -136,11 +139,23 @@ const showMovies = ((data) => {
 
         main.appendChild(divEl)
     }).join("")
+    const card = document.querySelectorAll(".card")
+    card.forEach(element => {
 
-    card.addEventListener("click", () => {
-        window.location = "/netflox/movie.html?id=" + id;
+        element.addEventListener("click", () => {
+            window.location = "/netflox/movie.html?id=" + id;
+            console.log(element)
+        });
+    })
+
+})
+
+const card = document.querySelectorAll(".card")
+card.forEach(element => {
+
+    element.addEventListener("click", () => {
+        console.log(element)
     });
-
 })
 
 // GENERES e ricerca per genere
