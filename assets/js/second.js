@@ -2,8 +2,9 @@
 // console.log(currentUrl);
 // const getId = currentUrl.searchParams.getId('id');
 // console.log(getId);
-
-
+const getId = (element) => document.getElementById(element)
+const create = (element) => document.createElement(element)
+const main = getId("main")
 
 // RICHIESTA API
 const getApi = (URL) => {
@@ -13,25 +14,24 @@ const getApi = (URL) => {
     })
 }
 
-getApi(apiUrl)
+const currentUrl = new URL(window.Location.href)
+    // console.log(currentUrl);
+const getIdUrl = currentUrl.searchParams.getId('id');
+// console.log(getId);
 
 // CREATE CARD IN HTML
 
 const showMovies = ((data) => {
     main.innerHTML = "";
-    // const card = document.querySelectorAll(".card")
+    // const card = document.querySelectorAll(".card"
 
     data.results.map((movie) => {
 
-        const { title, poster_path, overview, vote_average, id } = movie
-        const currentUrl = new URL(window.Location.href)
-        console.log(currentUrl);
-        const getId = currentUrl.searchParams.getId('id');
-        console.log(getId);
-        const divEl = create("div")
-        divEl.classList.add("movie")
-        divEl.id = id
-        divEl.innerHTML = `
+            const { title, poster_path, overview, vote_average, id } = movie
+            const divEl = create("div")
+            divEl.classList.add("movie")
+            divEl.id = id
+            divEl.innerHTML = `
 
         
          <div class="card " id="${id}" >
@@ -52,7 +52,15 @@ const showMovies = ((data) => {
         
         `
 
-        main.appendChild(divEl)
-    }).join("")
+            main.appendChild(divEl)
+        }).join("")
+        // const currentUrl = new URL(window.Location.href)
+        //     // console.log(currentUrl);
+        // const getId = currentUrl.searchParams.getId('id');
+        // // console.log(getId);
+        // getApi(`https://api.themoviedb.org/3/movie/${id}?api_key=47308f84a54b5d91b280f332b551f284`)
 
 })
+
+
+showMovies()
