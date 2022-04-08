@@ -7,11 +7,11 @@ const urlId = new URLSearchParams(window.location.search)
 
 var id = 0;
 
-if (urlId.has("id")) {
-    id = urlId.get("id");
-} else {
-    window.location = "index.html";
-}
+// if (urlId.has("id")) {
+//     id = urlId.get("id");
+// } else {
+//     window.location = "index.html";
+// }
 
 const movieDetail = (title, homepage, genres, overview, imgURL) => {
     const divEldetail = document.querySelector("div");
