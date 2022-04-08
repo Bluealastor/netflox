@@ -108,7 +108,7 @@ getApi(apiUrl)
 
 const showMovies = ((data) => {
     main.innerHTML = "";
-    const card = document.querySelector("card")
+    const card = document.querySelector(".card")
 
     data.results.map((movie) => {
         const { title, poster_path, overview, vote_average, id } = movie
