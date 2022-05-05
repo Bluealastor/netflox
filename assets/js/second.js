@@ -44,19 +44,20 @@ const showMovies = ((data) => {
             const divEl = create("div")
             divEl.classList.add("movie")
             divEl.innerHTML = `
+        <div class="movieCard">
         <div class="card" >
 
-        <img class="imagin" src="${"https://image.tmdb.org/t/p/w500/"+ data.poster_path}" alt="${data.title}"> 
+        <img class="imagin" src="${"https://image.tmdb.org/t/p/w500/"+ data?.poster_path}" alt="${data?.title}"> 
         </div>
         <div class="movieInfo">
-        <h3>  ${data.title} </h3>
-        <p class="Stars" style="--rating: ${data.vote_average};" aria-label="Rating of this product is 2.3 out of 5."></p>
-        </a>
-        </div>
+        <h2>  ${data?.title} </h2>
         <div class="overview">
         <h3>  Trama  </h3>
-        <p>   ${data.overview}  </p>
+        <p>   ${data?.overview}  </p>
         </div>
+        </div>
+        </div>
+
         `
 
             main.appendChild(divEl)
