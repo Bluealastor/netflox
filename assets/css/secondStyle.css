@@ -83,14 +83,14 @@ background-color:  #cdd2d5;
 .movieInfo h2{
     /* flex-direction: row; */
     color: red;
-    font-size:5vw;
+    font-size:2vw;
     justify-content: center;
 }
 
 .movieInfo h3 {
     color:red;
     /* flex-direction: row; */
-    font-size:5vw;
+    font-size:2vw;
 }
 
 .movieInfo p{
