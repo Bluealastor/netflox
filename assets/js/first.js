@@ -104,6 +104,7 @@ const getApi = (URL) => {
 }
 
 getApi(apiUrl)
+console.log('getApi(apiUrl)', getApi(apiUrl))
 
 // CREATE CARD IN HTML
 
@@ -116,26 +117,21 @@ const showMovies = ((data) => {
         const divEl = create("div")
         divEl.classList.add("movie")
         divEl.id = id
-        divEl.innerHTML = `
-
-        
-         <div class="card " id="${id}" >
-        <a href="movie.html?id=${id}">
+        divEl.innerHTML = `<div class="card " id="${id}" >
+        <a class="iperLink" href="movie.html?id=${id}" >
         <img class="imagin" src="${imgUrl+ poster_path}" alt="${title}"> 
         </div>
         <div class="movieInfo">
         <h3>  ${title} </h3>
-        <p class="Stars" style="--rating: ${vote_average};" aria-label="Rating of this product is 2.3 out of 5."></p>
+        <p class="Stars" style="--rating: ${vote_average};" aria-label="Rating of this product is 2.3 out of 10."></p>
         </a>
         </div>
-    
-
+        
         <div class="overview">
+        <a class="iperLink" href="movie.html?id=${id}" > <h3>  ${title} </h3></a>
         <h3>  Trama  </h3>
         <p>   ${overview}  </p>
-        </div>
-        
-        `
+        </div>`
 
         main.appendChild(divEl)
     }).join("")
@@ -143,13 +139,14 @@ const showMovies = ((data) => {
 })
 
 
-const card = document.querySelectorAll(".card")
-card.forEach(element => {
 
-    element.addEventListener("click", () => {
-        console.log(element)
-    });
-})
+// const card = document.querySelectorAll(".card")
+// card.forEach(element => {
+
+//     element.addEventListener("click", () => {
+//         console.log(element)
+//     });
+// })
 
 // GENERES e ricerca per genere
 

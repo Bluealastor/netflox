@@ -23,6 +23,7 @@ header {
     color: red;
     display: block;
     justify-content: center;
+    text-decoration: none;
 }
 
 #main {
@@ -33,10 +34,11 @@ header {
 
 .poster {
     width: 100%;
+    
 }
 
 .movie {
-    width: 200px;
+    width: 150px;
     margin: 1rem;
     border-radius: 3px;
     box-shadow: 5px 5px 5px rgb(206, 75, 75);
@@ -46,26 +48,32 @@ header {
 }
 
 .card {
-    width: 300px;
-    margin: 1rem;
-    border-radius: 3px;
+    width: 100%;
     box-shadow: 1px 4px 5px whitesmoke;
     background-color: var(--secondary-color);
     position: relative;
     overflow: hidden;
 }
 
-img {
+
+.imagin {
     width: 100%;
 }
 
 .movie {
+    
     padding: 0;
     width: 400px;
 }
 
+.iperLink{
+    color:red;
+    text-decoration: none ;
+}
+
 :root {
-    --star-size: 60px;
+
+    --star-size: 50px;
     --star-color: #fff;
     --star-background: #fc0;
 }
@@ -77,15 +85,18 @@ img {
     --percent: calc(var(--rating) / 10 * 100%);
     display: inline-block;
     font-size: var(--star-size);
+    width: 2rem;
     font-family: Times;
-    /*// make sure ★ appears correctly */
+    /* make sure ★ appears correctly; */
     line-height: 1;
 }
 
 .Stars::before {
     content: '★★★★★';
+    width: 0px;
     letter-spacing: 3px;
-    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+
+    background: linear-gradient(50deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -93,13 +104,13 @@ img {
 #STAR_RATING ul {
     margin: 0px;
     padding: 0px;
-    height: 16px;
+    height: 10px;
     list-style: none;
 }
 
 #STAR_RATING li {
-    width: 19px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
     display: block;
     float: left;
     background-image: url('star-off.gif');
@@ -112,7 +123,7 @@ img {
 }
 
 #STAR_RATING span.output {
-    padding: 3px;
+    padding: 0;
     color: #339900;
     font-weight: bold;
 }
@@ -130,14 +141,7 @@ img {
     letter-spacing: 0.3px;
 }
 
-.movie-info h3 {
-    margin-top: 0;
-    color: rgb(0, 0, 0);
-}
 
-.movie-info .vote {
-    color: black;
-}
 
 .overview {
     position: absolute;
