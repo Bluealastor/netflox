@@ -156,7 +156,7 @@ const setGenre = (() => {
     tags.innerHTML = "";
 
     genres.forEach(genre => {
-        const tag = document.createElement("div");
+        const tag = document.createElement("button");
         tag.classList.add("tag");
         tag.id = genre.id;
         tag.innerText = genre.name;

@@ -72,6 +72,8 @@ header {
     text-decoration: none ;
 }
 
+
+
 :root {
 
     --star-size: 50px;
@@ -179,3 +181,8 @@ header {
     display: inline-block;
     cursor: pointer;
 }
+
+.tag::after{
+    background-color: rgb(255, 255, 255);
+}
+
